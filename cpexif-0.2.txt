@@ -1,0 +1,28 @@
+                          Upload Information Template for Hobbes.nmsu.edu
+                          ===============================================
+
+        Archive Filename: cpexif-0.2.zip
+       Short Description: Copies EXIF data from a NEF (Nikon RAW file) or a JPEG file to a JPEG file
+        Long Description: Copies EXIF data from a NEF (Nikon RAW file) or a JPEG file to a JPEG file
+
+
+      Proposed directory
+           for placement: /pub/os2/apps/graphics
+
+               Your name: Bill Nau 
+           Email address: nau@tiny.net
+    Program contact name: n/a
+   Program contact email: cpexif@clex.sk
+             Program URL: http://www.clex.sk/cpexif/
+
+      Would you like the
+   contact email address
+    included in listings? yes
+
+Operating System/Version: Tested on eCS 1.2, but should work anywhere.  Statically linked.
+ Additional requirements: (none)
+
+                Replaces: cpexif-0.1.zip
+
+
+

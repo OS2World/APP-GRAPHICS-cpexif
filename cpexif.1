@@ -1,0 +1,55 @@
+.TH CPEXIF 1
+.SH NAME
+cpexif \- utility for copying EXIF data
+.SH SYNOPSIS
+.B cpexif --help
+
+.B cpexif --version
+
+.B clex source.jpg destination.jpg
+
+.B clex
+.RI [ option ]
+.B source.nef destination.jpg
+.SH "DESCRIPTION"
+Files produced by digital cameras contain EXIF data where
+information about the image is stored. CPEXIF copies EXIF
+data.
+
+.B JPEG to JPEG copy mode:
+CPEXIF copies the whole file segment containing the EXIF data.
+No data modifications can be performed and no options are available
+in this mode.
+
+.B NEF to JPEG copy mode:
+CPEXIF copies EXIF data from a Nikon RAW
+file (NEF) to a standard JPEG image file. Thumbnails are not copied.
+If a standard ISO field is missing, CPEXIF creates one using the
+information from the MakerNote field.
+.SH OPTIONS
+.TP
+.B \-\-help
+Display help and exit.
+.TP
+.B \-\-version
+Display program version and exit.
+.TP
+.B \-\-nomakernote
+Do not copy the MakerNote field. This reduces the size of the EXIF
+data block. Some information about the equipment and the picture
+will be lost.
+.TP
+.B \-\-noisofix
+Many Nikon cameras store the ISO Speed value in a non-standard way.
+By default CPEXIF fixes it by adding the missing ISO field to the
+EXIF data. Most people want this. If you don't, use this option.
+.SH LIMITATIONS
+EXIF data blocks larger than 64 kilobytes cannot be copied. This
+limit is given by the JPEG file format specification. Use the
+.B \-\-nomakernote
+option to overcome this limitation.
+.SH AUTHOR
+Copyright (C) 2005 Vlado Potisk <cpexif@clex.sk>
+.SH NOTES
+CPEXIF web page:
+.B http://www.clex.sk/cpexif
